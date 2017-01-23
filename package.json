@@ -1,0 +1,35 @@
+{
+  "name": "astra",
+  "version": "0.0.1",
+  "description": "Hierarchical node.js configuration manager that supports files and plain objects by default, but can easily be extended to incorporate everything you want into it",
+  "main": "lib/index.js",
+  "typings": "astra.d.ts",
+  "scripts": {
+    "test": "tsc && nyc ./node_modules/.bin/ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asn007/astra.git"
+  },
+  "keywords": [
+    "nconf",
+    "config",
+    "configs",
+    "hierarchical",
+    "astra",
+    "configuration"
+  ],
+  "author": "Andrey Sinitsyn <andrey.sin98@gmail.com> (http://andrey.space)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asn007/astra/issues"
+  },
+  "homepage": "https://github.com/asn007/astra#readme",
+  "devDependencies": {
+    "@types/es6-promise": "^0.0.32",
+    "@types/node": "^0.12.0",
+    "ava": "^0.17.0",
+    "nyc": "^10.1.2",
+    "typescript": "^2.1.5"
+  }
+}

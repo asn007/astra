@@ -1,0 +1,8 @@
+{
+  "target": "ES2015",
+  "listFiles": true,
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "lib"
+  }
+}
