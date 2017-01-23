@@ -23,7 +23,6 @@ export class FileStorage extends BaseStorage {
   }
 
   set(key: string, value: any) {
-    console.log(`${key} => ${value}`);
     this.markModified();
     const type = Object.prototype.toString.call(value);
     const isObject = (
