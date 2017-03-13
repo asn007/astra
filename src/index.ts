@@ -5,7 +5,7 @@ import {flatten} from "./utils";
 // TODO: implement atomic object merging
 
 export enum AstraMergeBehaviour {
-  DIFF_MERGE
+  DIFF_MERGE, ATOMIC_MERGE
 }
 
 export enum AstraSaveBehaviour {
@@ -19,7 +19,7 @@ class Astra {
   private _flattenedOverrides: Object = {};
   private _keyMap: Object = {};
   public storages: DoublyLinkedList<BaseStorage> = new DoublyLinkedList<BaseStorage>();
-  constructor(public mergeBehaviour: AstraMergeBehaviour,
+  constructor(public mergeBehaviour: AstraMergeBehaviour = AstraMergeBehaviour.DIFF_MERGE,
               public saveBehaviour: AstraSaveBehaviour) {  }
 
 

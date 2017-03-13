@@ -4,9 +4,8 @@ const fs = require('fs');
 import {BaseStorage} from "./basestorage";
 
 export class FileStorageOptions {
-  constructor(public fileName: string, public encoding?: string) {
-    if(!encoding) this.encoding = 'utf-8';
-  }
+  constructor(public fileName: string,
+              public encoding: string = 'utf-8') { }
 }
 
 export class FileStorage extends BaseStorage {
@@ -63,8 +62,8 @@ export class FileStorage extends BaseStorage {
     });
   }
 
-  reload(): Promise<any> {
-    return undefined;
+  reload(P: typeof Promise): Promise<any> {
+    return P.resolve();
   }
 
 }

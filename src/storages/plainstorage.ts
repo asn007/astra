@@ -43,10 +43,10 @@ export class PlainStorage extends BaseStorage {
   }
 
   save(P: typeof Promise): Promise<any> {
-    if(!this._modified) return new P((resolve, reject) => resolve());
+    if(!this._modified) return P.resolve();
     return new P((resolve) => {
       this.dictionary = unflatten(this.flattenedDictionary);
-      // FIXME: figura out something about O(n) complexity
+      // FIXME: figura out something about complexity
       for(let key of Object.keys(this.object)) delete this.object[key];
       for(let key of Object.keys(this.dictionary)) this.object[key] = this.dictionary[key];
       this._modified = false;
@@ -54,8 +54,8 @@ export class PlainStorage extends BaseStorage {
     });
   }
 
-  reload(): Promise<any> {
-    return undefined;
+  reload(P: typeof Promise): Promise<any> {
+    return P.resolve();
   }
 
 }
