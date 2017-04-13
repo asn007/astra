@@ -27,8 +27,8 @@
   "homepage": "https://github.com/asn007/astra#readme",
   "devDependencies": {
     "@types/es6-promise": "^0.0.32",
-    "@types/node": "^0.12.0",
-    "ava": "^0.17.0",
+    "@types/node": "^7.0.12",
+    "ava": "^0.19.1",
     "nyc": "^10.1.2",
     "typescript": "^2.1.5"
   }
